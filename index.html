@@ -18,7 +18,7 @@
           <div class="logo-text">
             <a href="./images/logo.svg"><img src="./images/logo.svg"></a>
           </div>
-          <div class="navbar-list">
+          <div class="navbar-list" id="nav-links">
             <div class="navbar-item"><a href="#">Pricing</a></div> 
             <div class="navbar-item"><a href="#">Product</a></div>
             <div class="navbar-item"><a href="#">About Us</a></div>
@@ -26,7 +26,8 @@
             <div class="navbar-item"><a href="#">Community</a></div>
           </div>
           <div class="hamburger-menu">
-            <img src="./images/icon-hamburger.svg" alt="menu">
+            <img src="./images/icon-hamburger.svg" onclick="show()" alt="menu" class="open" id="open">
+            <img src="./images/icon-close.svg" onclick="disclose()" alt=" close" class="close" id="close">
           </div>
           <div class="get-started">
             <button class="get started">Get Started</button>
@@ -63,9 +64,9 @@
           <div class="list-item">
             <div class="list-bullet">
               <button class="list-numbering">01</button>
+              <h3>Track company-wide progress</h3>
             </div>
             <div class="list-text">
-              <h3>Track company-wide progress</h3>
               <p>See how your day-to-day tasks fit into the wider vision. Go from 
                 tracking progress at the milestone level all the way done to the 
                 smallest of details. Never lose sight of the bigger picture again.</p>
@@ -73,10 +74,10 @@
           </div>    
             <div class="list-item">
               <div class="list-bullet">
-                <button class="list-numbering">02</button>
+                <button class="list-numbering" >02</button>
+                <h3>Advanced built-in reports</h3>
               </div>
               <div class="list-text">
-                <h3>Advanced built-in reports</h3>
                 <p>Set internal delivery estimates and track progress toward company 
                   goals. Our customisable dashboard helps you build out the reports 
                   you need to keep key stakeholders informed.</p>
@@ -85,9 +86,9 @@
               <div class="list-item">
                 <div class="list-bullet">
                   <button class="list-numbering">03</button>
+                  <h3>Everything you need in one place</h3>
                 </div>
                 <div class="list-text">
-                  <h3>Everything you need in one place</h3>
                   <p>Stop jumping from one service to another to communicate, store files, 
                     track tasks and share documents. Manage offers an all-in-one team 
                     productivity solution.</p>
@@ -186,7 +187,27 @@
   </div>  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/chaulagainkapil">Kapil</a>.
   </div>
+
+  <script>
+    const menu=document.getElementById("nav-links");
+    const open=document.getElementById("open");
+    const close=document.getElementById("close");
+
+    function show(){
+     menu.style.display="block";
+   close.style.display="block";
+   open.style.display="none";
+
+    }
+
+    function disclose(){
+      menu.style.display="none";
+    open.style.display="block";
+    close.style.display="none";
+ 
+     }
+  </script>
 </body>
 </html>
